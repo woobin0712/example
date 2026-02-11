@@ -71,7 +71,6 @@ img {
   background: var(--bg-header);
   z-index: 1000;
   top: 0;
-  display: none;
 }
 
 .loading .sub_text {
