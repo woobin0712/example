@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web-Log</title>
+  <link rel="stylesheet" href="resource/css/style.css">
+  <link rel="stylesheet" href="resource/fontawesome/css/all.css">
+  <script src="resource/js/jquery/jquery.js"></script>
+  <script src="resource/js/jquery/jquery-ui.js"></script>
+  <script src="resource/js/script.js"></script>
+</head>
+<body>
+
+  <!-- 로딩 애니메이션 -->
+  <div class="loading col center">
+    <div class="sub_text">SYSTEM READY: 100%</div>
+    <h1 class="typing"></h1>
+    <div class="loading_bar"></div>
+  </div>
+
+  <!-- 헤더 -->
+  <header>
+    <div class="wrap gap">
+      <a href="index.html" class="logo">Web<span>-</span>Log</a>
+
+      <div class="menu flex">
+        <div class="depth">
+          <a href="#">HTML</a>
+
+          <div class="submenu col">
+            <a href="#">HTML 정의 및 기본구조</a> 
+            <a href="#">태그와 속성</a>
+            <a href="#">블록, 인라인 요소</a>
+            <a href="#">Input 타입 및 유효성 검사</a>
+            <a href="#">시맨틱 태그와 웹 접근성</a>
+            <a href="#">SEO (robots.txt / Meta)</a>
+          </div>
+        </div>
+
+        <div class="depth">
+          <a href="#">CSS</a>
+
+          <div class="submenu col">
+            <a href="#">CSS 정의 및 사용법</a>
+            <a href="#">박스 모델</a>
+            <a href="#">포지셔닝</a>
+            <a href="#">Flexbox 레이아웃</a>
+            <a href="#">Grid 레이아웃</a>
+            <a href="#">반응형 디자인</a>
+            <a href="#">애니메이션 & 트랜지션</a>
+          </div>
+        </div>
+
+        <div class="depth">
+          <a href="#">JavaScript</a>
+
+          <div class="submenu col">
+            <a href="#">JS 기초 (변수/데이터타입)</a>
+            <a href="#">제어문 (조건문/반복문)</a>
+            <a href="#">함수와 스코프</a>
+            <a href="#">DOM 조작 및 이벤트</a>
+            <a href="#">객체와 배열 관리</a>
+            <a href="#">비동기 통신</a>
+            <a href="#">ES6+ 최신 문법 정리</a>
+          </div>
+        </div>
+
+        <div class="depth">
+          <a href="#">Jquery</a>
+
+          <div class="submenu col">
+            <a href="#">jQuery 설치 및 기본 구문</a>
+            <a href="#">셀렉터 & 필터</a>
+            <a href="#">이벤트 핸들링</a>
+            <a href="#">효과와 애니메이션</a>
+            <a href="#">DOM 탐색 및 조작</a>
+            <a href="#">AJAX 데이터 통신</a>
+          </div>
+        </div>
+
+        <div class="depth">
+          <a href="#">PHP</a>
+
+          <div class="submenu col">
+            <a href="#">PHP 환경 설정 및 기초</a>
+            <a href="#">GET vs POST 데이터 전송</a>
+            <a href="#">세션(Session)과 쿠키</a>
+            <a href="#">MySQL DB 연동 기초</a>
+            <a href="#">파일 업로드 및 보안</a>
+            <a href="#">API 서버 만들기 (JSON)</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="search">
+        <input type="text" name="search" id="search" placeholder="검색어를 입력해주세요." autocomplete="off">
+        <i class="fa fa-search"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- 비주얼 -->
+  <div class="visual flex aic jcc">
+    <div class="backgrounds">
+      <div class="img"></div>
+      <div class="gradation"></div> 
+      <div class="mainGradation"></div> 
+    </div>
+
+    <div class="container">
+      <div class="left">
+        <div class="badge">WEB-LOG ARCHIVE v2.0</div>
+        <h1 class="mainText">
+          Web-Log<span class="dot">.</span><br>
+          <span class="subText">성장을 기록하는 우리만의 저장소</span>
+        </h1>
+        <p class="infor">동아리 부원들이 직접 작성한 기술 로그입니다.<br> 배운 내용을 기록하고 함께 성장합니다.</p>
+
+        <div class="stats-grid">
+          <div class="stat-card" style="--point-color: #e34f26;">
+            <div class="tag flex aic"><span class="indicator"></span>HTML</div>
+            <div class="count">42</div>
+            <div class="unit">POSTS</div>
+          </div>
+          
+          <div class="stat-card" style="--point-color: #1572b6;">
+            <div class="tag flex aic"><span class="indicator"></span>CSS</div>
+            <div class="count">38</div>
+            <div class="unit">POSTS</div>
+          </div>
+
+          <div class="stat-card" style="--point-color: #f7df1e;">
+            <div class="tag flex aic"><span class="indicator"></span>JS</div>
+            <div class="count">56</div>
+            <div class="unit">POSTS</div>
+          </div>
+
+          <div class="stat-card" style="--point-color: #0769ad;">
+            <div class="tag flex aic"><span class="indicator"></span>JQ</div>
+            <div class="count">15</div>
+            <div class="unit">POSTS</div>
+          </div>
+
+          <div class="stat-card" style="--point-color: #777bb4;">
+            <div class="tag flex aic"><span class="indicator"></span>PHP</div>
+            <div class="count">24</div>
+            <div class="unit">POSTS</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="editor-window">
+          <div class="editor-header gap">
+            <div class="window-dots flex">
+              <span class="red"></span><span class="yellow"></span><span class="green"></span>
+            </div>
+            <span class="window-title">ARCHIVE.VIEW</span>
+          </div>
+
+          <div class="editor-body col">
+            <div class="log-item flex aic" style="--point-color: #e34f26;">
+              <span class="item-dot"></span>
+              <span class="item-name">semantic_layout<span class="ext">.html</span></span>
+            </div>
+            
+            <div class="log-item flex aic" style="--point-color: #1572b6;">
+              <span class="item-dot"></span>
+              <span class="item-name">flexbox_master<span class="ext">.css</span></span>
+            </div>
+
+            <div class="log-item flex aic" style="--point-color: #f7df1e;">
+              <span class="item-dot"></span>
+              <span class="item-name">async_fetch_api<span class="ext">.js</span></span>
+            </div>
+
+            <div class="log-item flex aic" style="--point-color: #777bb4;">
+              <span class="item-dot"></span>
+              <span class="item-name">auth_system<span class="ext">.php</span></span>
+            </div>
+
+            <div class="log-item flex aic" style="--point-color: #0769ad;">
+              <span class="item-dot"></span>
+              <span class="item-name">modal_interaction<span class="ext">.jq</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll col aic">
+      <span class="scrollText">SCROLL</span>
+      <div class="scrollLine"></div>
+    </div>
+  </div>
+
+  <!-- 콘텐츠 -->
+  <div class="contents">
+
+    <!-- 웹 작동 방식 -->
+    <div class="logic">
+      <div class="wrap">
+        <div class="title">
+          <div class="top">
+            <i class="fa fa-microchip"></i> 
+
+            <div class="info">
+              <span class="number">SECTION 01</span>
+              <div class="line"></div>
+            </div>
+          </div>
+
+          <div class="texts">
+            <div class="main">
+              <h2 class="mainText">웹 작동 방식</h2>
+              <span class="subText">HOW THE WEB WORKS</span>
+            </div>
+
+            <p class="description">브라우저 렌더링 엔진부터 HTTP 통신 프로토콜까지, 웹의 근본적인 메커니즘을 심도 있게 다룹니다.</p>
+          </div>
+          
+          <div class="line"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- UI/UX -->
+    <div class="design">
+      <div class="wrap">
+        <div class="title">
+          <div class="top">
+            <i class="fa fa-table-columns"></i> 
+
+            <div class="info">
+              <span class="number">SECTION 02</span>
+              <div class="line"></div>
+            </div>
+          </div>
+
+          <div class="texts">
+            <div class="main">
+              <h2 class="mainText">UI/UX</h2>
+              <span class="subText">Interface & Experience</span>
+            </div>
+
+            <p class="description">사용자의 시선을 사로잡는 시각적 디자인 요소와 편리한 상호작용을 위한 UX 방법론을 기록합니다.</p>
+          </div>
+          
+          <div class="line"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 언어별 퀴즈 -->
+    <div class="quiz">
+      <div class="wrap">
+        <div class="title">
+          <div class="top">
+            <i class="fa fa-terminal"></i> 
+
+            <div class="info">
+              <span class="number">SECTION 03</span>
+              <div class="line"></div>
+            </div>
+          </div>
+
+          <div class="texts">
+            <div class="main">
+              <h2 class="mainText">언어별 퀴즈</h2>
+              <span class="subText">Interactive Quiz</span>
+            </div>
+
+            <p class="description">HTML, CSS, JS 실력을 점검해볼 수 있는 단계별 퀴즈를 통해 본인의 기술 수준을 확인해보세요.</p>
+          </div>
+          
+          <div class="line"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 참고 자료 -->
+    <div class="references">
+      <div class="wrap">
+        <div class="title">
+          <div class="top">
+            <i class="fa fa-book-open"></i> 
+
+            <div class="info">
+              <span class="number">SECTION 04</span>
+              <div class="line"></div>
+            </div>
+          </div>
+
+          <div class="texts">
+            <div class="main">
+              <h2 class="mainText">참고 자료</h2>
+              <span class="subText">Useful Resources</span>
+            </div>
+
+            <p class="description">성장에 도움을 주는 양질의 공식 문서, 라이브러리, 그리고 영감을 주는 웹사이트 링크들을 공유합니다.</p>
+          </div>
+          
+          <div class="line"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 푸터 -->
+  <footer>
+    <div class="wrap flex jcsb">
+      <div class="col">
+        <a href="index.html" class="logo">Web<span>-</span>Log</a>
+        <p>웹 개발의 기초부터 심화까지 기록하는 공간</p>
+        <p>© 2026 Web-Log. All rights reserved.</p>
+      </div>
+
+      <div class="col">
+        <h4>Navigation</h4>
+
+        <div class="col">
+          <div class="flex"><a href="#">HTML</a></div>
+          <div class="flex"><a href="#">CSS</a></div>
+          <div class="flex"><a href="#">JavaScript</a></div>
+          <div class="flex"><a href="#">Jquery</a></div>
+          <div class="flex"><a href="#">PHP</a></div>
+        </div>
+      </div>
+
+      <div class="col">
+        <h4>Tech Stack</h4>
+
+        <div class="col">
+          <div class="flex"><a href="#">Frontend</a></div>
+          <div class="flex"><a href="#">Backend</a></div>
+          <div class="flex"><a href="#">UI/UX</a></div>
+          <div class="flex"><a href="#">SEO</a></div>
+        </div>
+      </div>
+
+      <div class="col">
+        <h4>Connect</h4>
+
+        <div class="sns flex">
+          <a href="#"><i class="far fa-envelope"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
